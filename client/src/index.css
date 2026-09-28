@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased overflow-x-hidden;
+  }
+}
+
+@layer components {
+  /* Glassmorphic Cards & Panels */
+  .glass-card {
+    @apply bg-white/70 dark:bg-slate-900/60 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800/80 shadow-sm transition-all duration-200;
+  }
+
+  .glass-card-hover {
+    @apply glass-card hover:border-brand-500/50 dark:hover:border-brand-500/50 hover:shadow-lg hover:shadow-brand-500/5 transition-all duration-200;
+  }
+
+  .glass-dropdown {
+    @apply bg-white/95 dark:bg-slate-900/95 backdrop-blur-2xl border border-slate-200 dark:border-slate-800 shadow-xl rounded-xl;
+  }
+
+  /* Custom Input Styling */
+  .custom-input {
+    @apply w-full px-3.5 py-2.5 bg-slate-50 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-700/80 rounded-xl text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500/40 focus:border-brand-500 transition-all;
+  }
+
+  /* Badge styling */
+  .badge-glow-urgent {
+    @apply bg-rose-500/10 text-rose-500 border border-rose-500/20 shadow-[0_0_10px_-2px_rgba(244,63,94,0.3)];
+  }
+
+  .badge-glow-high {
+    @apply bg-amber-500/10 text-amber-500 border border-amber-500/20;
+  }
+
+  .badge-glow-ai {
+    @apply bg-brand-500/10 text-brand-400 border border-brand-500/30 shadow-[0_0_12px_-3px_rgba(99,102,241,0.4)];
+  }
+}
+
+/* Custom Sleek Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.2);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.4);
+}

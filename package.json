@@ -1,0 +1,33 @@
+{
+  "name": "productivity-assistant",
+  "version": "1.0.0",
+  "description": "AI-Powered Personal Productivity Assistant - Full Stack System",
+  "private": true,
+  "scripts": {
+    "dev": "npm run dev --prefix server & npm run dev --prefix client",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "build": "npm run build --prefix client && npm run build --prefix server",
+    "docker:up": "docker compose up -d --build",
+    "docker:down": "docker compose down",
+    "docker:logs": "docker compose logs -f",
+    "prisma:generate": "npm run prisma:generate --prefix server",
+    "prisma:migrate": "npm run prisma:migrate --prefix server",
+    "prisma:studio": "npm run prisma:studio --prefix server",
+    "seed": "npm run seed --prefix server"
+  },
+  "keywords": [
+    "productivity",
+    "ai",
+    "fastapi",
+    "react",
+    "vite",
+    "express",
+    "postgresql",
+    "pgvector",
+    "prisma",
+    "socketio"
+  ],
+  "author": "Antigravity Engineering",
+  "license": "MIT"
+}
